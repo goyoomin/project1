@@ -131,8 +131,31 @@ button {
   z-index: 2;
 }
 .social-links {
-  margin: 20px 0;
+  display: flex;
+  justify-content: center; /* 가로 정렬을 위해 가운데 정렬합니다. */
 }
+
+.social-link {
+  width: 40px; /* 각 버튼의 너비를 설정합니다. */
+  height: 40px; /* 각 버튼의 높이를 설정합니다. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px; /* 각 버튼 사이의 여백을 조정합니다. */
+  border-radius: 50%;
+  box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+  cursor: pointer;
+}
+
+.social-link a {
+  color: #000;
+  text-decoration: none; /* 링크에 밑줄 제거 */
+}
+
+.social-link:active {
+  box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+}
+
 form h1 {
   font-weight: bold;
   margin: 0;
