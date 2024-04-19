@@ -70,6 +70,16 @@
         nowIndicator: true, // 현재 시간 마크
         dayMaxEvents: true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
         locale: 'ko', // 한국어 설정
+        eventClick: function(info) {
+          var title = prompt('수정', info.event.title);
+          if (title) {
+            info.event.setProp('title', title);
+          } else {
+          if (title == "") {
+           info.event.remove();
+          }
+        }
+        },
         eventAdd: function(obj) { // 이벤트가 추가되면 발생하는 이벤트
           console.log(obj);
         },
